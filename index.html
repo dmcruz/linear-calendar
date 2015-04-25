@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linear Calendar</title>
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet">
+<script src="linearcalendar.js" type="text/javascript"></script>
+</head>
+<body>
+ <h2>Linear Calendar</h2>
+ <script type="text/javascript">
+  var currentYear = (new Date()).getFullYear();
+  for(var i = currentYear; i >= currentYear - 10; i--) {
+    var cal = new Calendar(0, i);
+    cal.generateHTML();
+    document.write(cal.getHTML());
+  }
+ </script>
+</body>
+</html>
